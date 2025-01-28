@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+   
+   #facebook-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+    iframe {
+      border: none;
+      overflow: hidden;
+      border-radius: 10px;
+       width: 800px; 
+      height: 800px; 
+    }
+  </style>
+</head>
+<body>
+
+  <div id="facebook-posts"></div>
+
+  <script>
+
+    const urls = [
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid03dQqYnLCK4EedFtxP2PVeJQVqZ9D2S6GXwqKJ7EJDBidJYF52ew7E1YTaQLkxedMl&id=100067686381287", 
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid0HgmsZuBZWvjrjXDaZeGskVf166Pa9nMdbppfBcoeGm9dq6kwhK7f6dXzf5NqLbo8l&id=100067686381287" ,
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid0wGVvQBaSggHcfdggkeizk7kCpW28MPKdSQjrVCjy5nGvW3jat6mK8JniMPRetn8cl&id=100067686381287",
+      
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid02K8D8ZWuDMu6MCjkAgzuHXpSFUL6ZqH5dwxD3hgbZEjEB12i3Wsy1Ard8vJBua6RPl&id=100067686381287" ,
+      "https://www.facebook.com/permalink.php?story_fbid=pfbid0KnYVPsiGeYD98SnVaBhxqA7ezZD8kQAmkHSfCcVdP4yvjzfoxhXS8HtF9wQq967Ll&id=100067686381287"
+
+    ];
+
+    const container = document.getElementById('facebook-posts');
+
+   urls.forEach(url => {
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(url)}&show_text=true&width=800`;
+      iframe.width = "800";  
+      iframe.height = "800"; 
+      iframe.style = "border:none;overflow:hidden;border-radius:10px;"; 
+      iframe.scrolling = "no";
+      iframe.frameBorder = "0";
+      iframe.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+      container.appendChild(iframe); 
+    });
+  </script>
+</body>
+</html>

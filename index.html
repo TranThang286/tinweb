@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Giới thiệu về Trường THPT Nguyễn Hiền</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        /* Your existing CSS code */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: lightblue;
+            font-family: "Times New Roman", Times, serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        header {
+         
+            width: 100%;
+            height: 600px;
+            color: white;
+            text-align: center;
+            justify-content: center;
+            
+
+        }
+        header h1 {
+            font-size: 48px;
+            font-weight: 600;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 22px;
+            font-weight: 500;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        section {
+            background-color: #fff;
+            margin: 30px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4CAF50;
+            font-weight: 600;
+        }
+        section p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        ul1 {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul1 li1 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #444;
+        }
+        ul1 li1 strong {
+            color: #333;
+        }
+        .school-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        footer {
+            margin-top: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        footer p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            header h1 {
+                font-size: 36px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+
+            .school-img {
+                height: 250px;
+            }
+        }
+      
+        .logo{
+            background-image: url("logo.png");
+            height: 100px;
+            position: absolute;
+            background-repeat: no-repeat;
+             background-size: contain;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+        .slider-frame{
+            
+            margin-top: 0px;
+            overflow: hidden;
+            height: 600px;
+            width: 1070px;
+             
+            }
+ 
+ 
+ 
+        @keyframes slide_animation{
+            0% {left:0px;}
+            10% {left:0px;}
+            20% {left:1200px;}
+            30% {left:1200px;}
+            40% {left: 2400px;}
+            50% {left: 2400px;}
+            60% {left: 1200px;}
+            70% {left: 1200px;}
+            80% {left: 0px;}
+            90% {left: 0px;}
+            100% {left:0px;}
+  }
+ 
+  @-webkit-keyframes slide_animation{
+        0% {Left:0px;}
+        10% {left:0px;}
+        20% {left:1200px;}
+        30% {left:1200px;}
+        40% {left: 2400px;}
+        50% {left: 2400px;}
+        60% {left: 1200px;}
+        70% {left: 1200px;}
+        80% {left: 0px;}
+        90% {left: 0px;}
+        100% {left:0px;}
+  }
+ 
+  .slide-images{
+      width: 3600px;
+      height: 800px;
+      margin: 0 0 0 -2400px;
+      position: relative;
+      -webkit-animation-name: slide_animation;
+      animation-name: slide_animation;
+      -webkit-animation-duration: 33s;
+      animation-duration: 33s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+      animation-direction: alternate;
+      -webkit-animation-play-state: running;
+      animation-play-state: running;
+  }
+ 
+  .img-container{
+    
+    margin-top: 30px;
+    margin-bottom: 500px;
+      height: 500px;
+      width: 1200px;
+      position: relative;
+      float: left;
+    }
+       
+        .chat-widget {
+             z-index: 1001;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+          
+        }
+        .chat-icon {
+
+            width: 60px;
+            height: 60px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .chat-icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .chat-box {
+             
+            display: none;
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 300px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeInUp 0.5s ease;
+        }
+        .chat-box header {
+            height: 0px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .chat-content {
+            padding: 15px;
+        }
+        .chat-content p {
+            margin: 0 0 10px;
+        }
+        .chat-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .chat-content textarea {
+
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            resize: none;
+            font-size: 14px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .chat-content textarea:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+            outline: none;
+        }
+        .chat-content button {
+              
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .chat-content button:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .chat-widget.active .chat-box {
+            display: block;
+        }
+        .chat-content .notification {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 4px;
+            display: none;
+            font-size: 14px;
+        }
+        .thanhngang{
+            width: 100%;
+            height: 15px;
+            background-color: #004aad;
+            
+        }  
+       
+        .item{
+        background-color: lightblue;
+        min-height: 50px;
+         word-wrap: break-word
+        }
+        .contain{
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            margin-top: 50px;
+            margin-left:20px ;
+            margin-right: 20px;
+            gap: 20px 0px;
+           grid-template-areas: 
+
+            "q w e"
+            "r r r"
+            "t y y" 
+            "u u u"  
+            "i o o"      
+            "p a a"      
+           
+            "f f f"        
+            "g h h"
+            "j j j"
+            "k l l"            
+            "z z z"           
+            "x c c"            
+            "v v v"         
+            "b b b"  
+            "n n n"            
+            "m m m"
+            ;
+            .itemspace{
+                grid-area: "1";
+            }
+            .item-1{grid-area: q;
+                place-items: center; background-color: lightblue;
+            }
+            .item-2{grid-area:w; place-items: center; background-color: lightblue;}
+            .item-3{grid-area:e; place-items: center; background-color: lightblue;}
+            .item-4{grid-area:r;}
+            .item-5{grid-area:t;}
+            .item-6{grid-area:y;}
+            .item-7{grid-area:u}
+            .item-8{grid-area:i}
+            .item-9{grid-area:o}
+            .item-10{grid-area:p}
+            .item-11{grid-area:a}
+            
+            .item-14{grid-area:f}
+            .item-15{grid-area:g;}
+            .item-16{grid-area:h;}
+            .item-17{grid-area:j;place-items: center}
+            .item-18{grid-area:k}
+            .item-19{grid-area:l}
+            .item-20{grid-area:z}
+            .item-21{grid-area:x}
+            .item-22{grid-area:c}
+            .item-23{grid-area:v}
+            .item-24{grid-area:b}
+            .item-25{grid-area:n;}
+            .item-26{grid-area:m}
+        }
+        .itemtieude{
+            text-align: center;
+            font-weight: bold;
+            font-size:50px;
+            font-family: "Times New Roman", Times, serif;
+            background-color: yellow;
+        }
+        .itemdaudong{
+            font-weight: bold;
+            font-size:30px;
+        }
+        .itemtext{
+            font-family: "Times New Roman", Times, serif;
+            font-size:25px;
+            margin-left: 0px;
+        }
+        .itemurl{
+             font-family: "Times New Roman", Times, serif;
+            font-size:25px;
+            color: blue;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .emoji{
+            background-image: url(school.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+            
+        }
+        .emoji1{
+            background-image: url(csvc.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+          
+        }
+        .emoji2{
+            background-image: url(achive.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+            place-items: center;
+        }
+         .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .shared-element {
+            display: none;
+        }
+        .shared-element.active {
+            display: block;
+        }
+        button {
+         
+            background: none;               
+            border: none;                   
+            padding: 10px 20px;              
+            cursor: pointer;                 
+        }
+         button:hover {
+            color: #fff;                    
+            background: darkblue;            
+        }
+       .itemb{
+        background-color: #004aad;
+         word-wrap: break-word;
+         place-items: center;
+        }
+        .containbutton{
+            position: fixed;
+            top: 0px;
+             width: 100%;
+             height: 100px;
+             background-color: #004aad;
+             margin-bottom: 0px;
+            display: grid;
+            grid-template-columns: 100px 310px 310px 310px ;
+            margin-top: 0px;
+           grid-template-areas: 
+            "q o w e r"
+            ;
+            .item-main{
+                grid-area: o;
+            }
+            .item-logo{grid-area: q;
+            }
+            .item-gt{grid-area:w; place-items: center}
+            .item-hd{grid-area:e; }
+            .item-tt{grid-area:r;}
+              z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: height 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+        }
+         .containbutton.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .containbutton.scrolled {
+            height: 70px;
+        }
+
+        .containbutton.scrolled.logo {
+            height: 50px;
+            width: 50px;
+            top: 10px;
+            left: 10px;
+        }
+        .button1{
+                position: relative;
+               display: flex;
+                justify-content: center; 
+                align-items: center;
+                height: 100px;
+                font-weight: bold;
+                font-size:30px;
+                font-family: "Times New Roman", Times, serif;
+               color: white;
+                cursor: pointer;
+            transition: transform 0.3s ease;
+            }
+        .button1:hover {
+            transform: scale(1.02);
+        }
+
+     .anhmain{
+        z-index: 2;
+         background-image: url(anhtruong3.jpg) ;
+         position: relative;
+         top: 50%;
+         left: 50%;
+        height:750px; 
+        background-repeat: no-repeat;
+        background-size: contain;
+        filter: blur(2.5px);
+         }
+        .text-anh {
+            background-color:rgba(255, 255, 255, 0.7) ;
+             font-family: "Times New Roman", Times, serif;
+            color: darkblue; 
+            font-size: 40px; 
+            font-weight: bold; 
+            text-align: center; 
+            top: 275px;
+            left: 50px;
+            margin-right:50px ;
+              text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);}
+        html {
+                scroll-behavior: smooth;
+
+            }
+        a{
+            z-index: 1;
+            text-decoration: none;
+        }
+        .button1 a{
+            z-index: 1;
+            text-decoration: none;
+             color: white;
+              
+        }
+
+
+        .itempage2{
+           background-color: white;
+        min-height: 50px;
+         word-wrap: break-word;
+        }
+  
+    .containmain{
+        background-color: lightblue;
+        height: 600px;
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            margin-top: 100px;
+            margin-left:0px ;
+           grid-template-areas: 
+            "q q q"
+            "w w w"
+            ;
+            .item1{grid-area: q;
+                place-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                ;  background-color: lightblue;
+            }
+            .item2{grid-area:w; ;  background-color: lightblue;}
+          
+            
+        }
+         .containpage2{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1px 1.5fr;
+
+            margin-top: 0px;
+            margin-left:0px ;
+           grid-template-areas: 
+            "q w e td td "
+            "r r r m b"
+            "t t t m b"
+            "y y y m b"
+            "h h h m b"
+            "j j j m b"
+            "l l l m b"
+            ;
+            .itemtd{
+                margin-top: 55px;
+                    grid-area: td;
+                    place-items: center;
+                    justify-content: center;;  background-color: lightblue;
+            }
+            .itemm{
+                grid-area: m;
+                background-color: black;
+            }
+            .itemtdt{
+         
+                grid-area: b;
+                place-items: center;;  background-color: lightblue;
+            }
+            .itemdt{
+                grid-area: q;
+                
+                place-items: center;;  background-color: lightblue;
+            }
+            .itemtntn{
+                grid-area: w;
+              
+                place-items: center;;  background-color: lightblue;
+            }
+            .itemtv{
+                grid-area: e;
+               
+                place-items: center;;  background-color: lightblue;
+            }
+           
+            
+            .item4{grid-area:r;justify-content: center;margin-top: 50px;  background-color: lightblue;}
+            .item5{grid-area:t;justify-content: center;margin-left: 40px;  background-color: lightblue;}
+            .item6{grid-area:y;justify-content: center;margin-top: 50px;  background-color: lightblue;}
+            .item7{grid-area:h;justify-content: center;margin-left: 40px;  background-color: lightblue;}
+            .item8{grid-area:j; justify-content: center;margin-top: 50px;  background-color: lightblue;}
+            .item9{grid-area:l;justify-content: center; margin-left: 40px;  background-color: lightblue;}
+            justify-content: center;
+             background-color: lightblue;
+        }
+
+        .itemtieudepage2{
+             text-align: center;
+            font-weight: bold;
+            font-size:30px;
+            font-family: "Times New Roman", Times, serif;
+            color: white;
+            background-color: blue;
+        }
+     .phd{
+         text-align: center;
+            font-weight: bold;
+            font-size:30px;
+            font-family: "Times New Roman", Times, serif;
+            color: white;
+            background-color: blue;
+     }
+      .logo1 {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            object-fit: cover; 
+        }
+        
+    .gallery {
+    display: flex;
+    gap: 10px;
+  }
+
+  .thumbnail {
+   
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+
+  .thumbnail:hover {
+    transform: scale(1.01);
+  }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 5000;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;}
+    .trans{}
+    .trans:hover{
+        transform: scale(1.1);
+    }
+    .itempage3{
+           background-color: lightblue;
+        min-height: 50px;
+         word-wrap: break-word;
+        }
+    .containpage3{
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 5px 1.5fr;
+       
+            margin-top: 0px;
+            margin-left:0px ;
+           grid-template-areas: 
+            "tt tb sk h h"
+            "a a a j t"
+            "b b b j t"
+            "c c c j t"
+            "d d d j t"
+            "e e e j t"
+            "g g g j t"
+            ;
+
+        .item13{
+            grid-area: tt;place-items: center; margin-bottom: 30px;
+        }
+        .item23{
+            grid-area: tb;place-items: center;margin-bottom: 30px;
+        }
+        .item33{
+            grid-area: sk;place-items: center;margin-bottom: 30px;
+        }
+        .item43{
+            grid-area: a;
+        }
+        .item53{
+            grid-area: b;
+        }
+        .item63{
+            grid-area: c;
+        }
+        .item73{
+            grid-area: d;
+        }
+        .item83{
+            grid-area: e;
+        }
+        .item93{
+            grid-area: g;
+        }
+        .item103{
+            grid-area: t;margin-left: 20px;
+        }
+        .item113{
+            grid-area: h; margin-top: 100px;
+        }
+        .item123{
+            grid-area: j;
+            background-color: black;
+        }
+        justify-content: center;
+        }
+        .emoji5{
+            background-image: url(sk.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+            place-items: center;
+        }
+        .emoji6{
+            background-image: url(thongbao.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+            place-items: center;
+            margin-left: 15px;
+        }
+        .emoji7{
+            background-image: url(tintuc.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 75px;
+            height: 75px;
+            place-items: center;
+        }
+        .background1 {
+            position: relative;
+            background-image: url('anhtruong5.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .overlay {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            line-height: 1.5;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        iframe {
+    width: 100%;  /* Làm iframe chiếm toàn bộ chiều rộng của phần tử cha */
+    height: 600px; /* Làm iframe chiếm toàn bộ chiều cao của phần tử cha */
+    border: none; /* Tùy chỉnh border nếu cần */
+    margin-right:30px /* Khoảng cách bên ngoài iframe */
+}
+    </style>
+</head>
+<body>
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+<div class="containbutton" id="menu">
+           <div class="item-logo itemb">
+              <div class="logo"></div>
+          </div>
+            <div class="item-main itemb">
+             <button onclick="showPage('page0')" class="button1">Trang chủ</button>
+        </div>
+        <div class="item-gt itemb">
+             <button onclick="showPage('page1')" class="button1"><a href="#1">Giới thiệu</a></button>
+        </div>
+            <div class="item-hd itemb">
+             <button onclick="showPage('page2')" class="button1"><a href="#1">Hoạt động</a></button>
+        </div>
+         <div class="item-tt itemb">
+             <button onclick="showPage('page3')" class="button1"><a href="#1">Tin tức-Thông báo</a></button>
+        </div>
+    </div>
+
+
+<div id="page0" class="page active">
+            <div class="background1">
+        <div class="overlay">
+            <h1>Sứ mệnh của Trường THPT Nguyễn Hiền là đào tạo nguồn nhân lực chất lượng cao, nghiên cứu khoa học và chuyển giao công nghệ tiên tiến trong lĩnh vực xây dựng đáp ứng sự nghiệp công nghiệp hóa, hiện đại hóa đất nước và hội nhập quốc tế.</h1>
+        </div>
+    </div>
+       </div>
+   
+<div id="shared" class="shared-element">
+        
+    <div class="containmain" id="1">
+        
+        <div class="item1 item">
+            
+                <div class="slider-frame">
+                    <div class="slide-images">
+                        <div class="img-container">
+                            <img src="anhtruong3.jpg" class="thumbnail">
+                        </div>
+                        <div class="img-container">
+                             <img src="anhtruong1.jpg"class="thumbnail">
+                         </div>
+                        <div class="img-container">
+                             <img src="anhtruong2.jpg"class="thumbnail">
+                        </div>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="item2 item">
+        <div class=thanhngang></div>
+        </div>
+
+    </div>
+</div>
+<div id="page1" class="page">
+
+                    <div class="contain">
+                        
+                        <a href="#nguyenhien" class="trans">     
+                             <div class="item-1 item"> 
+        
+                                 <div class="emoji" ></div>
+                                    <div class="itemurl">Trường THPT Nguyễn Hiền</div>
+        
+                            </div>
+                        </a>
+                        <!--  -->
+                        <a href="#csvc" class="trans">  
+                             <div class="item-2 item">
+                                 <div class="emoji1" ></div>
+                                 <div class="itemurl">Cơ sở vật chất</div>
+                            </div>
+                        </a>
+                        <!--  -->
+                        <a href="#achive" class="trans">  
+                             <div class="item-3 item">
+                                    <div class="emoji2" ></div>
+                                     <div class="itemurl"> Thành tựu</div>
+                             </div>
+                         </a>
+                        <!--  -->
+                        <div class="item-4 item">
+                            <div class="itemtieude" id="nguyenhien">THPT Nguyễn Hiền</div>
+                        </div>
+        
+                        <!--  -->
+                        <div class="item-5 item">
+                                <div class="itemdaudong">Quá trình thành Lập</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-6 item">
+                            <div class="itemtext">
+                                <p>Trường THPT Nguyễn Hiền được thành lập vào tháng 8/2001, khởi đầu từ một điểm trường Minh Đức với chỉ 15 cán bộ, giáo viên và hơn 200 học sinh. Mặc dù cơ sở vật chất còn hạn chế, nhưng tinh thần vượt khó và khát khao học hỏi của thầy và trò đã góp phần tạo dựng nền tảng vững chắc cho sự phát triển sau này.</p>
+                                <br>
+                               <div style="display: table; width: 100%;">
+    
+                                         <div style="display: table-cell; ">
+                                                    <p>Đến năm 2007, trường chuyển về cơ sở mới tại đường Hàm Nghi, phường Bình Khánh, TP. Long Xuyên, mở ra một chặng đường mới, rộng lớn hơn, để thắp sáng những ước mơ học tập.</p>
+                                         </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="thptbk.jpg" width="400px" height="300px" border="3px" class="thumbnail">
+                                        </div>
+                                </div>
+                            <br>
+                                <div style="display: table; width: 100%;">
+                                         <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="anhtruong4.jpg" class="thumbnail" width="350px" height="280px"border="3px" style="margin-right: 10px;">
+                                        </div>
+                                         <div style="display: table-cell; ">
+                                                    <p>Năm 2015, trường chính thức đổi tên từ Trường THPT Bình Khánh thành Trường THPT Nguyễn Hiền, mang trong mình một cái tên mới đầy tự hào, tiếp nối truyền thống hiếu học và khẳng định sứ mệnh đào tạo thế hệ trẻ đầy tài năng. Mỗi bước đi của trường đều gắn liền với những kỷ niệm, những nỗ lực không ngừng nghỉ, để hôm nay, trường đã trở thành một ngôi nhà chung nơi học sinh có thể tự do ươm mầm cho ước mơ và khát vọng.</p>
+                                         </div>
+                                        
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="item-7 item"></div>
+                        <!--  -->
+                        <div class="item-8 item">
+                            <div class="itemdaudong">Sứ Mệnh</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-9 item">
+                            <div class="itemtext">Sứ mệnh của Trường THPT Nguyễn Hiền là mang đến một nền giáo dục chất lượng, giúp học sinh phát triển toàn diện và trở thành những con người có trách nhiệm, sáng tạo, đầy khát vọng cống hiến.<br></div>
+
+                        </div>
+                        <!--  -->
+                        <div class="item-10 item">
+                            <div class="itemdaudong">Tầm nhìn</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-11 item">
+                             <div class="itemtext">Tầm nhìn của Trường THPT Nguyễn Hiền là trở thành nơi ươm mầm những ước mơ, giúp học sinh phát triển toàn diện và tự tin vươn ra thế giới, đóng góp cho xã hội với trái tim nhiệt huyết và trách nhiệm.</div>
+                        </div>
+                        <!--  -->
+                        
+
+
+                        <div class="item-14 item">
+                             <div class="itemtieude" id="csvc">Cơ sở vật chất</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-15 item">
+                            <div class="itemdaudong">Thư viện</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-16 item">
+                             <div class="itemtext">
+                                <div style="display: table; width: 100%;">
+    
+                                         <div style="display: table-cell; ">
+                                                    <p>Thư viện Trường THPT Nguyễn Hiền sở hữu nguồn tài nguyên sách phong phú, từ sách giáo khoa, tài liệu tham khảo đến các tác phẩm văn học giá trị, đáp ứng nhu cầu học tập và khám phá của học sinh.
+                                                    Không chỉ là nơi lưu trữ tri thức, thư viện còn tổ chức nhiều hoạt động ý nghĩa như giới thiệu sách, thi tìm hiểu tri thức và viết thư tri ân, khơi dậy cảm hứng học tập và sáng tạo. Đây là không gian kết nối, nơi học sinh vừa học hỏi, vừa trưởng thành với niềm đam mê tri thức.</p>
+                                         </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="thuvien1.jpg" width="450px" height="350px" border="3px" class="thumbnail">
+                                        </div>
+                                </div>
+                                <br>
+                                <div style="display:table; width: 100%;">
+                            
+                                    <div style="display: table-cell; ">
+                                        <img src="thuvien2.jpg" class="thumbnail" width="200px" height="250px" border="3px" ><figcaption style="font-size:20px">Hoạt động tái chế chai nhựa để trồng cây</figcaption>
+                                    </div>
+                                     <div style="display: table-cell; ">
+                                        <img src="thuvien3.jpg" class="thumbnail" width="330px" height="250px" border="3px" style="margin-left:30px"><figcaption style="font-size:20px;text-align: center;"> Hoạt động nhắn gởi lời yêu thương  20/11</figcaption>
+                                    </div>
+                                      <div style="display: table-cell; ">
+                                        <img src="thuvien4.jpg" class="thumbnail" width="350px" height="250px" border="3px" style="margin-left:30px"><figcaption style="font-size:20px">Chuyên mục Tiết đọc sách Thư viện 2024-2025</figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="item-17 item"></div>
+                        <!--  -->
+                        <div class="item-18 item">
+                            <div class="itemdaudong">Phòng Lab</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-19 item">
+                             <div class="itemtext">
+                                <div style="display: table; width: 100%;">
+    
+                                         <div style="display: table-cell; ">
+                                                    <p>Phòng thí nghiệm của Trường THPT Nguyễn Hiền được trang bị đầy đủ thiết bị cho các môn khoa học như hóa học, sinh học, vật lý và tin học, giúp học sinh thực hành và thực hiện thí nghiệm chính xác và an toàn. Đây là không gian để học sinh khám phá kiến thức, rèn luyện kỹ năng thực hành, phát triển tư duy sáng tạo và trách nhiệm khi làm việc với các thiết bị khoa học.</p>
+                                         </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="tinhoc.jpg" width="450px" height="350px" border="3px" class="thumbnail" style="margin-left: 10px;"><figcaption style="text-align: center;">Phòng thực hành tin học</figcaption>
+                                        </div>
+                                </div>
+                             </div>
+                        </div>
+                        <!--  -->
+                        <div class="item-20 item"></div>
+                        <!--  -->
+                        <div class="item-21 item">
+                            <div class="itemdaudong">Hội trường</div></div>
+                        <!--  -->
+                        <div class="item-22 item">
+                           <div class="itemtext">
+                                <div style="display: table; width: 100%;">
+    
+                                         <div style="display: table-cell; ">
+                                                    <p>Hội trường của Trường THPT Nguyễn Hiền là không gian rộng rãi, được thiết kế để tổ chức các sự kiện lớn như hội thảo, cuộc thi và các hoạt động ngoại khóa. Hội trường được trang bị đầy đủ âm thanh, ánh sáng và các thiết bị cần thiết để đảm bảo các sự kiện diễn ra suôn sẻ và ấn tượng. Đây là nơi học sinh, giáo viên và khách mời cùng tụ họp, tạo ra những khoảnh khắc đáng nhớ và mang lại những trải nghiệm học đường ý nghĩa.</p>
+                                         </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="hoitruong.jpg" width="450px" height="350px" border="3px" class="thumbnail" style="margin-left: 10px;"><figcaption style="text-align: center;">hội trường</figcaption>
+                                        </div>
+                                </div>
+                             </div>
+                        </div>
+                        <!--  -->
+                        <div class="item-23 item"></div>
+                        <!--  -->
+                        <div class="item-24 item">
+                            <div class="itemtieude" id="achive">Thành tựu</div>
+                        </div>
+                        <!--  -->
+                        <div class="item-25 item">
+                             <div class="itemtext">
+                                <p>Trường THPT Nguyễn Hiền đã đạt được nhiều thành tựu nổi bật trong suốt quá trình phát triển. Các học sinh của trường luôn có thành tích xuất sắc trong các kỳ thi học sinh giỏi cấp tỉnh và quốc gia, cũng như đạt điểm cao trong các kỳ thi tốt nghiệp THPT. Trường cũng chú trọng đến các hoạt động ngoại khóa, tổ chức nhiều cuộc thi, sự kiện và chương trình giao lưu học hỏi, giúp học sinh phát triển toàn diện.</p>
+                             </div>
+                        </div>
+                        <!--  -->
+                        <div class="item-26 item">
+
+                              <div style="display: table; width: 100%;">
+    
+                                         <div style="display: table-cell; ">
+                                            <img src="hsgtinh.jpg" width="450px" height="350px" border="3px" class="thumbnail" ><figcaption style="text-align: center;">HSG cấp tỉnh</figcaption>
+                                         </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="bongchuyen.jpg" width="450px" height="350px" border="3px" class="thumbnail" style="margin-left: 50px;"><figcaption style="text-align: center;">Giải nhất bóng chuyền nam chào mừng kỷ niệm 75 năm ngày truyền thống học sinh, sinh viên, Mừng Đảng mừng Xuân Ất Tỵ năm 2025</figcaption>
+                                        </div>
+                                        <div style="display: table-cell; vertical-align: middle;">
+                                             <img src="caulong.jpg" width="450px" height="350px" border="3px" class="thumbnail" style="margin: 10px;"><figcaption style="text-align: center;">Giải nhất cầu lông đôi nam cấp tỉnh</figcaption>
+                                        </div>
+                                </div>
+                        </div>
+                        <!--  -->
+                </div>
+
+        </div>
+
+<div id="page2" class="page">
+    <div class="containpage2">
+        <div class="itemtd"><div class="phd">Hoạt động gần đây</div></div>
+        <div class="itemtdt"><iframe src="hdgd.html" width="400px" height="800px" marginwidth="10px"></iframe>
+        </div>
+        <div class="itemm"></div>
+         <a href="#dt" class="trans"><div class="itemdt itempage2">
+            <div><img src="doantruong.jpg"  class="logo1"></div>
+             <div class="itemurl">Đoàn Trường</div>
+        </div></a>
+
+        <a href="#tntn" class="trans"><div class="itemtntn itempage2">
+             <div><img src="tntn.jpg"  class="logo1"></div>
+            <div class="itemurl">Đội TNTN</div>
+        </div></a>
+          
+        <a href="#tv" class="trans"><div class="itemtv itempage2"><div><img src="tv.jpg"  class="logo1"></div><div class="itemurl">Thư viện</div></div></a>
+      
+        <div class="item4 itempage2"><div class="itemtieudepage2" id="dt">Hoạt động đoàn trường</div></div>
+    
+    
+        <div class="item5 itempage2"><iframe src="doantruong.html" width="600px" height="800px" marginwidth="10px"></iframe></div>
+  
+        <div class="item6 itempage2"><div class="itemtieudepage2" id="tntn">Hoạt động đội TNTN</div></div>
+   
+        <div class="item7 itempage2"> <iframe src="tntn.html" width="600px" height="800px" marginwidth="10px"></iframe></div>
+         <div class="item8 itempage2"><div class="itemtieudepage2" id="tv">Hoạt động Thư viện</div></div>
+   
+        <div class="item9 itempage2">
+            <iframe src="thuvien.html" width="600px" height="800px" marginwidth="10px"></iframe>
+
+        </div>
+    </div>
+
+</div>
+
+<div id="page3" class="page">
+  <div class="containpage3">
+        <div class="item123"></div>
+        <a href="#tt">
+    <div class="item13 itempage3">
+        <div class="trans">
+         <div class="emoji7"></div>
+        <div class="itemurl">Tin tức</div>
+        </div>
+        
+      </div>
+  </a> 
+  <a href="#tb">
+      <div class="item23 itempage3" >
+        <div class="trans">
+         <div class="emoji6"></div>
+        <div class="itemurl">Thông báo</div>
+        </div>
+       
+    </div>
+    </a>
+    <a href="#sk">
+      <div class="item33" itempage3>
+          
+        <div class="trans">
+         <div class="emoji5"></div>
+        <div class="itemurl">Sự kiện</div>
+        </div>
+    </div>
+    </a>
+      <div class="item43 itempage3">
+        <div class="itemtieudepage2" id="tt">Tin tức</div>
+        
+      </div>
+      <div class="item53"><iframe src="tintuc.html" width="600px" height="800px"></iframe></div>
+      
+      <div class="item63">
+         <div class="itemtieudepage2" id="tb">Thông báo</div>
+    </div>
+      <div class="item73"><iframe src="thongbao.html" width="600px" height="800px"></iframe> </div>
+     
+      <div class="item83"><div class="itemtieudepage2" id="sk">Sự kiện sắp tới</div></div>
+      <div class="item93"><iframe src="sk.html" width="600px" height="800px"></iframe></div>
+      
+
+      <div class="item103"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.3625213482665!2d105.41892027205293!3d10.392754555896458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310a72c600495161%3A0x974256ae80ed3284!2zVHJ1bmcgaOG7jWMgcGjhu5UgdGjDtG5nIE5ndXnhu4VuIEhp4buBbg!5e0!3m2!1svi!2s!4v1737980935262!5m2!1svi!2s" width="500" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <br><br><br>
+        <a href="http://thptnguyenhienlx.edu.vn/" target="_blank"><div class="trans" ><div  class="itemtieudepage2" style=" margin-left:10px">Wesite chính thức của trường ở đây</div></div></a>
+      </div>
+      <div class="item113"><div class="itemtieudepage2">Địa chỉ trường</div></div>
+
+  </div>
+</div>
+  <script>
+    
+       function showPage(pageId) {
+         const menu = document.getElementById('menu');
+        let lastScrollY = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > 50) {
+                menu.classList.add('scrolled');
+                if (currentScrollY > lastScrollY) {
+                    menu.classList.add('hidden');
+                } else {
+                    menu.classList.remove('hidden');
+                }
+            } else {
+                menu.classList.remove('scrolled', 'hidden');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+
+            
+        document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            document.getElementById(pageId).classList.add('active');
+
+            
+            const sharedElement = document.getElementById('shared');
+            if (pageId === 'page1' || pageId === 'page2'|| pageId === 'page3') {
+                sharedElement.classList.add('active');
+            } else {
+                sharedElement.classList.remove('active');
+            }
+        };
+       
+        
+    </script>      
+
+       
+         <div class="chat-widget">
+        <div class="chat-icon" onclick="toggleChatBox()">💬</div>
+        <div class="chat-box">
+            <div class="chat-content">
+                <p>Nếu có thắc mắc hoặc lỗi trên trang web, vui lòng nhắn tin cho tôi.</p>
+               
+                <div class="notification">Phản hồi của bạn đã được gửi thành công!</div> 
+                <form id="feedback-form">
+                    <textarea name="message" placeholder="Gửi phản hồi của bạn tại đây..." rows="3"></textarea>
+                    <button type="submit" id="button">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>TRƯỜNG THPT NGUYỄN HIỀN<br>
+
+Địa chỉ:  204 Đ Nguyễn Trường Tộ, P. Bình Khánh, TP Long Xuyên, An Giang</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        
+        emailjs.init('x3TOdY2jrM7A2p8U2'); 
+
+        function toggleChatBox() {
+            var chatWidget = document.querySelector('.chat-widget');
+            chatWidget.classList.toggle('active');
+        }
+
+        const btn = document.getElementById('button');
+
+        document.getElementById('feedback-form')
+            .addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                btn.value = 'Sending...'; 
+                const serviceID = 'default_service';
+                const templateID = 'template_frbhyxf';
+
+               
+                emailjs.sendForm(serviceID, templateID, this)
+                    .then(() => {
+                        btn.value = 'Gửi'; 
+                        var notification = document.querySelector('.notification');
+                        notification.style.display = 'block'; 
+                        document.querySelector('textarea').value = ''; 
+
+                        
+                        setTimeout(function() {
+                            notification.style.display = 'none';
+                        }, 3000);
+                    }, (err) => {
+                        btn.value = 'Gửi'; 
+                        alert('Lỗi: ' + JSON.stringify(err));
+                    });
+            });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    if (window.FB === undefined) {
+      var script = document.createElement("script");
+      script.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0";
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+    });
+
+   var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var span = document.getElementsByClassName("close")[0];
+  var thumbnails = document.querySelectorAll('.thumbnail');
+  thumbnails.forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src.replace('small', 'large'); 
+    }
+  });
+
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</body>
+</html>

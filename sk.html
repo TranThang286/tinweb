@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin Tức</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .content .news {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .content .news img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .content .news h3 {
+            font-size: 1.2rem;
+            color: #004a99;
+        }
+        .content .news p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .content .news .read-more {
+
+            color: #0066cc;
+            font-weight: bold;
+            text-decoration: none;
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="news">        
+        <h3>Đang cập nhật....</h3>
+    </div>
+
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault();
+                document.querySelectorAll('.content').forEach(section => section.style.display = 'none');
+                document.querySelectorAll('.full-news').forEach(section => section.style.display = 'none');
+                const targetId = event.target.getAttribute('href');
+                document.querySelector(targetId).style.display = 'block';
+            });
+        });
+
+        function hideFullNews(event) {
+            event.preventDefault();
+            document.querySelectorAll('.full-news').forEach(section => section.style.display = 'none');
+            document.querySelectorAll('.content').forEach(section => section.style.display = 'flex');
+        }
+    </script>
+</body>
+</html>
