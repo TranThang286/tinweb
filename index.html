@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -759,7 +759,7 @@
 }
     </style>
 </head>
-<body >
+<body>
 
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -782,9 +782,9 @@
              <button onclick="showPage('page3')" class="button1"><a href="#1">Tin tức-Thông báo</a></button>
         </div>
     </div>
-<div id="content"> 
 
-<div id="page0" class="page ">
+
+<div id="page0" class="page active">
             <div class="background1">
         <div class="overlay">
             <h1>Sứ mệnh của Trường THPT Nguyễn Hiền là đào tạo nguồn nhân lực chất lượng cao, nghiên cứu khoa học và chuyển giao công nghệ tiên tiến trong lĩnh vực xây dựng đáp ứng sự nghiệp công nghiệp hóa, hiện đại hóa đất nước và hội nhập quốc tế.</h1>
@@ -819,7 +819,7 @@
 
     </div>
 </div>
-<div id="page1" class="page active">
+<div id="page1" class="page">
 
                     <div class="contain">
                         
@@ -1163,7 +1163,7 @@
 
 Địa chỉ:  204 Đ Nguyễn Trường Tộ, P. Bình Khánh, TP Long Xuyên, An Giang</p>
     </footer>
-<div>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script type="text/javascript">
@@ -1235,48 +1235,22 @@
   }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
- 
-<script>
-function scalePage() {
+    <script>
+      function scalePage() {
     let originalWidth = 1368; // Kích thước gốc của trang
     let originalHeight = 674;
 
-    // Tính tỷ lệ thu phóng
+    // Tính tỷ lệ thu phóng dựa trên cả chiều rộng và chiều cao
     let scaleX = window.innerWidth / originalWidth;
     let scaleY = window.innerHeight / originalHeight;
     let scale = Math.min(scaleX, scaleY); // Giữ đúng tỷ lệ gốc
 
-    // 🟢 Áp dụng scale cho nội dung chính nhưng giữ kích thước gốc
-    let content = document.getElementById("content");
-    if (content) {
-        content.style.transform = `scale(${scale})`;
-        content.style.transformOrigin = "top left";
-        content.style.width = `${originalWidth}px`;
-        content.style.height = `${originalHeight}px`;
-        content.style.position = "absolute"; // Giữ đúng vị trí gốc
-        content.style.left = "0";
-        content.style.top = "0";
-    }
-
-    // 🟢 Scale menu nhưng giữ nguyên vị trí
-    let menu = document.getElementById("menu");
-    if (menu) {
-        menu.style.transform = `scale(${scale})`;
-        menu.style.transformOrigin = "top left";
-        menu.style.position = "fixed"; // Giữ menu cố định
-        menu.style.width = `${originalWidth}px`; // Giữ nguyên chiều rộng
-    }
-
-    // Điều chỉnh chiều cao tránh lỗi cuộn
-    document.documentElement.style.height = `${(100 / scale)}vh`;
+    document.body.style.zoom = scale; // Áp dụng thu phóng
+    document.documentElement.style.height = `${(100 / scale)}vh`; // Điều chỉnh chiều cao
 }
 
-// Gọi khi trang tải & thay đổi kích thước màn hình
 window.addEventListener("resize", scalePage);
-window.addEventListener("load", scalePage);
-</script>
-
-
-   
+scalePage(); // Gọi ngay khi tải trang
+    </script>
 </body>
 </html>
