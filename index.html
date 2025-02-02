@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -759,7 +759,7 @@
 }
     </style>
 </head>
-<body>
+<body >
 
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
@@ -782,7 +782,7 @@
              <button onclick="showPage('page3')" class="button1"><a href="#1">Tin tức-Thông báo</a></button>
         </div>
     </div>
-
+<div id="content"> 
 
 <div id="page0" class="page active">
             <div class="background1">
@@ -1163,7 +1163,7 @@
 
 Địa chỉ:  204 Đ Nguyễn Trường Tộ, P. Bình Khánh, TP Long Xuyên, An Giang</p>
     </footer>
-
+<div>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script type="text/javascript">
@@ -1236,21 +1236,39 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-      function scalePage() {
-    let originalWidth = 1368; // Kích thước gốc của trang
-    let originalHeight = 674;
+function scalePage() {
+    let originalWidth = 1356; // Kích thước gốc của trang
+    let originalHeight = 647;
 
-    // Tính tỷ lệ thu phóng dựa trên cả chiều rộng và chiều cao
+    // Tính toán tỷ lệ scale theo chiều rộng & chiều cao
     let scaleX = window.innerWidth / originalWidth;
     let scaleY = window.innerHeight / originalHeight;
     let scale = Math.min(scaleX, scaleY); // Giữ đúng tỷ lệ gốc
 
-    document.body.style.zoom = scale; // Áp dụng thu phóng
-    document.documentElement.style.height = `${(100 / scale)}vh`; // Điều chỉnh chiều cao
+    // 🟢 Áp dụng scale cho toàn bộ trang (trừ menu)
+    let content = document.getElementById("content"); // Phần nội dung chính
+    if (content) {
+        content.style.transform = `scale(${scale})`;
+        content.style.transformOrigin = "top left"; // Giữ góc trên làm điểm thu phóng
+        content.style.width = `${originalWidth}px`;
+        content.style.height = `${originalHeight}px`;
+    }
+
+    // Điều chỉnh chiều cao tránh cuộn lỗi
+    document.documentElement.style.height = `${(100 / scale)}vh`;
+
+    // 🟢 Áp dụng zoom cho thanh menu thay đổi theo màn hình
+    let menu = document.getElementById("menu");
+    if (menu) {
+        menu.style.zoom = scale; // Menu sẽ thay đổi kích thước theo màn hình
+    }
 }
 
+// Gọi scale khi trang tải & khi thay đổi kích thước màn hình
 window.addEventListener("resize", scalePage);
-scalePage(); // Gọi ngay khi tải trang
-    </script>
+window.addEventListener("load", scalePage);
+</script>
+
+   
 </body>
 </html>
