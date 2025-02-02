@@ -1235,39 +1235,47 @@
   }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script>
+ 
+<script>
 function scalePage() {
-    let originalWidth = 1356; // Kích thước gốc của trang
-    let originalHeight = 647;
+    let originalWidth = 1368; // Kích thước gốc của trang
+    let originalHeight = 674;
 
-    // Tính toán tỷ lệ scale theo chiều rộng & chiều cao
+    // Tính tỷ lệ thu phóng
     let scaleX = window.innerWidth / originalWidth;
     let scaleY = window.innerHeight / originalHeight;
     let scale = Math.min(scaleX, scaleY); // Giữ đúng tỷ lệ gốc
 
-    // 🟢 Áp dụng scale cho toàn bộ trang (trừ menu)
-    let content = document.getElementById("content"); // Phần nội dung chính
+    // 🟢 Áp dụng scale cho nội dung chính nhưng giữ kích thước gốc
+    let content = document.getElementById("content");
     if (content) {
         content.style.transform = `scale(${scale})`;
-        content.style.transformOrigin = "top left"; // Giữ góc trên làm điểm thu phóng
+        content.style.transformOrigin = "top left";
         content.style.width = `${originalWidth}px`;
         content.style.height = `${originalHeight}px`;
+        content.style.position = "absolute"; // Giữ đúng vị trí gốc
+        content.style.left = "0";
+        content.style.top = "0";
     }
 
-    // Điều chỉnh chiều cao tránh cuộn lỗi
-    document.documentElement.style.height = `${(100 / scale)}vh`;
-
-    // 🟢 Áp dụng zoom cho thanh menu thay đổi theo màn hình
+    // 🟢 Scale menu nhưng giữ nguyên vị trí
     let menu = document.getElementById("menu");
     if (menu) {
-        menu.style.zoom = scale; // Menu sẽ thay đổi kích thước theo màn hình
+        menu.style.transform = `scale(${scale})`;
+        menu.style.transformOrigin = "top left";
+        menu.style.position = "fixed"; // Giữ menu cố định
+        menu.style.width = `${originalWidth}px`; // Giữ nguyên chiều rộng
     }
+
+    // Điều chỉnh chiều cao tránh lỗi cuộn
+    document.documentElement.style.height = `${(100 / scale)}vh`;
 }
 
-// Gọi scale khi trang tải & khi thay đổi kích thước màn hình
+// Gọi khi trang tải & thay đổi kích thước màn hình
 window.addEventListener("resize", scalePage);
 window.addEventListener("load", scalePage);
 </script>
+
 
    
 </body>
