@@ -674,12 +674,14 @@
         }
         .item63{
             grid-area: c;
+            margin-top: 40px;
         }
         .item73{
             grid-area: d;
         }
         .item83{
             grid-area: e;
+            margin-top: 40px;
         }
         .item93{
             grid-area: g;
@@ -752,15 +754,46 @@
             100% { opacity: 1; transform: translateY(0); }
         }
         iframe {
-    width: 100%;  /* Làm iframe chiếm toàn bộ chiều rộng của phần tử cha */
-    height: 600px; /* Làm iframe chiếm toàn bộ chiều cao của phần tử cha */
-    border: none; /* Tùy chỉnh border nếu cần */
-    margin-right:30px /* Khoảng cách bên ngoài iframe */
+    width: 100%; 
+    height: 600px; 
+    border: none; 
+    margin-right:30px ;
+}
+#scrollTopBtn {
+    z-index: 2;
+    position: fixed;
+    bottom: 85px;
+    right: 2px;
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+}
+
+#scrollTopBtn svg {
+    width: 60px; 
+    height: 60px;
+    stroke: black; 
+}
+
+#scrollTopBtn:hover svg {
+    stroke: blue; 
+    transform: scale(1.2); 
+}
+
+#scrollTopBtn.show {
+    display: block;
+    opacity: 1;
 }
     </style>
 </head>
 <body>
-
+<button id="scrollTopBtn" onclick="scrollToTop()">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+</button>
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
   <img class="modal-content" id="img01">
@@ -1100,6 +1133,21 @@
 
   </div>
 </div>
+<script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                scrollTopBtn.classList.add("show");
+            } else {
+                scrollTopBtn.classList.remove("show");
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
   <script>
     
        function showPage(pageId) {
@@ -1161,7 +1209,7 @@
     <footer>
         <p>TRƯỜNG THPT NGUYỄN HIỀN<br>
 
-Địa chỉ:  204 Đ Nguyễn Trường Tộ, P. Bình Khánh, TP Long Xuyên, An Giang</p>
+Địa chỉ:  204 Đ Nguyễn Trường Tộ, P. Bình Khánh, TP Long Xuyên, An Giang<br> Thành viên nhóm: Thắng, Trọng, Thu, P.Huy</p>
     </footer>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -1237,20 +1285,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
       function scalePage() {
-    let originalWidth = 1368; // Kích thước gốc của trang
+    let originalWidth = 1368; 
     let originalHeight = 674;
 
-    // Tính tỷ lệ thu phóng dựa trên cả chiều rộng và chiều cao
+  
     let scaleX = window.innerWidth / originalWidth;
     let scaleY = window.innerHeight / originalHeight;
-    let scale = Math.min(scaleX, scaleY); // Giữ đúng tỷ lệ gốc
+    let scale = Math.min(scaleX, scaleY); 
 
     document.body.style.zoom = scale; // Áp dụng thu phóng
-    document.documentElement.style.height = `${(100 / scale)}vh`; // Điều chỉnh chiều cao
+    document.documentElement.style.height = `${(100 / scale)}vh`; 
 }
 
 window.addEventListener("resize", scalePage);
-scalePage(); // Gọi ngay khi tải trang
+scalePage(); 
     </script>
 </body>
 </html>
